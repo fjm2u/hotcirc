@@ -1,0 +1,38 @@
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ランタイムデータ
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ディレクトリに依存するファイル
+node_modules
+jspm_packages
+
+# ビルド出力
+dist
+build
+temp
+
+# IDEの設定ファイルやキャッシュファイル
+.idea
+.vscode
+*.swp
+*.swo
+*.sublime-workspace
+
+# OS生成ファイル
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+.env
+

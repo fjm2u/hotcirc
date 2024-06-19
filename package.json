@@ -1,0 +1,19 @@
+{
+  "name": "hotcirc",
+  "version": "1.0.0",
+  "license": "ISC",
+  "bin": {
+    "hotcirc": "./dist/main.js"
+  },
+  "scripts": {
+    "build": "tsc && echo '#!/usr/bin/env node' | cat - dist/main.js > temp && mv temp dist/main.js && npm unlink -g && npm link"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.15",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  }
+}
