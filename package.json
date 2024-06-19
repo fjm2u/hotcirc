@@ -1,12 +1,14 @@
 {
   "name": "hotcirc",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "license": "ISC",
   "bin": {
-    "hotcirc": "./dist/main.js"
+    "hotcirc": "dist/main.js"
   },
   "scripts": {
-    "build": "tsc && echo '#!/usr/bin/env node' | cat - dist/main.js > temp && mv temp dist/main.js && npm unlink -g && npm link"
+    "build:local": "tsc && echo '#!/usr/bin/env node' | cat - dist/main.js > temp && mv temp dist/main.js && npm unlink -g && npm link",
+    "build": "tsc && echo '#!/usr/bin/env node' | cat - dist/main.js > temp && mv temp dist/main.js",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@types/node": "^17.0.15",
@@ -15,5 +17,17 @@
   },
   "dependencies": {
     "commander": "^12.1.0"
-  }
+  },
+  "description": "A utility tool for developing circom circuits",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fjm2u/hotcirc.git"
+  },
+  "author": "fjm2u",
+  "bugs": {
+    "url": "https://github.com/fjm2u/hotcirc/issues"
+  },
+  "homepage": "https://github.com/fjm2u/hotcirc#readme"
 }
