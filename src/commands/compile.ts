@@ -40,7 +40,7 @@ const compile = () => {
     const exportCommand = `snarkjs zkey export verificationkey ${conf.artifacts.zkey} ${conf.artifacts.vkey}`;
     const exportResult = execSync(exportCommand);
     console.log(exportResult.toString());
-    execSync(`cp ${artifactDir}/main_js/main.wasm ${conf.artifacts.wasm}`);
+    fs.copyFileSync(`${artifactDir}/main_js/main.wasm`, conf.artifacts.wasm);
 
     if (conf.circuits.afterCompile) {
         console.log("Running afterCompile script:", conf.circuits.afterCompile);
