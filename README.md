@@ -7,7 +7,7 @@ Hot reload for circom development.
 ### Create a new project
 To start a new project, run the following command:
 ```shell
-hotcirc init
+npx hotcirc init
 ```
 
 This will create a `hotcirc.json` file in the root directory of your project. The file will look like this:
@@ -52,13 +52,13 @@ This will create a `hotcirc.json` file in the root directory of your project. Th
 ### Compile the circuit
 To compile the circuit, run the following command:
 ```shell
-hotcirc compile
+npx hotcirc compile
 ```
 
 ### Start hot reload
 To start the hot reload, run the following command:
 ```shell
-hotcirc dev
+npx hotcirc dev
 ```
 
 We will implement vite plugin in the future to make it easier to use.
